@@ -27,6 +27,15 @@ public class Address {
     @Type(type = "pg-uuid")
     private UUID id;
 
+    /**
+     * Postgresql enum what are the advantages and disadvantages?
+     * <p>
+     * https://stackoverflow.com/questions/2318123/postgresql-enum-what-are-the-advantages-and-disadvantages
+     */
+    @Type(type = "pgsql-enum")
+    @Enumerated(EnumType.STRING)
+    private AddressType addressType;
+
     @Column(name = "country")
     private String country;
 
