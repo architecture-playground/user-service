@@ -10,5 +10,7 @@ CREATE TABLE user_management.address
     additional_address VARCHAR,
     info               VARCHAR,
     created_at         TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated_at         TIMESTAMP WITH TIME ZONE NOT NULL
+    updated_at         TIMESTAMP WITH TIME ZONE NOT NULL,
+    created_by         UUID                     NOT NULL,
+    updated_by         UUID                     NOT NULL
 );

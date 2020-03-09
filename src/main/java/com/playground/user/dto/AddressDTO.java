@@ -14,9 +14,11 @@ public class AddressDTO {
     private String street;
     private String houseNumber;
     private String floor;
-    private String zipcode;
+    private String zipCode;
     private String additionalAddress;
     private String info;
     private Instant createdAt;
     private Instant updatedAt;
+    private UUID createdBy;
+    private UUID updatedBy;
 }
