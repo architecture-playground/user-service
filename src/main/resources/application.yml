@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: system
+  jpa:
+    properties.hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      default_schema: public
+  flyway:
+    schemas: public, user
+
+server:
+  port: 8999
+
+springdoc:
+  swagger-ui:
+    path: /openapi-ui.html
