@@ -1,13 +1,21 @@
 package com.playground.user.model;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.UUID;
 
+@Slf4j
+@EntityListeners(AuditingEntityListener.class)
 @Data
 @Table(schema = "user_management", name = "address")
 @Entity
@@ -45,9 +53,19 @@ public class Address {
 
     //// AUTO-GENERATED
 
+    @CreatedDate
     @Column(name = "created_at")
     private Instant createdAt;
 
+    @LastModifiedDate
     @Column(name = "updated_at")
     private Instant updatedAt;
+
+    @CreatedBy
+    @Column(name = "created_by")
+    private UUID createdBy;
+
+    @LastModifiedBy
+    @Column(name = "updated_by")
+    private UUID updatedBy;
 }

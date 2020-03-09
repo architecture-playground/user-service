@@ -10,7 +10,7 @@ public class AddressCreationRequestDTO {
     private String street;
     private String houseNumber;
     private String floor;
-    private String zipcode;
+    private String zipCode;
     private String additionalAddress;
     private String company;
     private String info;
