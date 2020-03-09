@@ -5,6 +5,7 @@ import com.playground.user.dto.AddressCreationRequestDTO;
 import com.playground.user.dto.AddressDTO;
 import com.playground.user.exception.UserNotFoundException;
 import com.playground.user.model.Address;
+import com.playground.user.model.AddressType;
 import com.playground.user.repository.AddressRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -61,6 +62,7 @@ public class AddressService {
         newAddr.setZipCode("Auto-generated");
         newAddr.setAdditionalAddress("Auto-generated");
         newAddr.setInfo("Auto-generated");
+        newAddr.setAddressType(AddressType.BILLING);
 
         return newAddr;
     }

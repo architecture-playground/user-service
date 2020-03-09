@@ -1,5 +1,6 @@
 package com.playground.user.dto;
 
+import com.playground.user.model.AddressType;
 import lombok.Data;
 
 import java.time.Instant;
@@ -9,6 +10,7 @@ import java.util.UUID;
 public class AddressDTO {
 
     private UUID id;
+    private AddressType addressType;
     private String country;
     private String city;
     private String street;
