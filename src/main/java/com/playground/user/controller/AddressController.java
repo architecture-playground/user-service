@@ -15,7 +15,8 @@ import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
-@RestController("v1/address")
+@RequestMapping("v1/address")
+@RestController
 public class AddressController {
 
     private final AddressService addressService;
