@@ -1,4 +1,4 @@
-CREATE TYPE AddressType AS ENUM (
+CREATE TYPE user_management.AddressType AS ENUM (
     'BILLING'
     );
 
