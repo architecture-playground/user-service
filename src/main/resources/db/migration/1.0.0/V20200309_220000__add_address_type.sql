@@ -1,6 +1,6 @@
-CREATE TYPE user_management.AddressType AS ENUM (
+CREATE TYPE user_management.address_type AS ENUM (
     'BILLING'
     );
 
 ALTER TABLE user_management.address
-    ADD COLUMN address_type AddressType NOT NULL DEFAULT 'BILLING';
+    ADD COLUMN address_type user_management.address_type NOT NULL DEFAULT 'BILLING';
