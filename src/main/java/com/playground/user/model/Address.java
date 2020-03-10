@@ -34,6 +34,7 @@ public class Address {
      */
     @Type(type = "pgsql-enum")
     @Enumerated(EnumType.STRING)
+    @Column(name = "address_type")
     private AddressType addressType;
 
     @Column(name = "country")
